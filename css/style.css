@@ -44,9 +44,10 @@ ul li{
     padding: 23px 0px;
     cursor: pointer;
     position: relative;
+    transition-duration: .7s;
 }
 .menu-item a{
-    padding: 0 10px;
+    padding: 0 13px;
     letter-spacing: -0.4px;
 }
 .menu-item:hover{
@@ -78,11 +79,11 @@ ul li{
 }
 .info-conteiner{
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
 }
 .description-left{
-    margin: 0 50px;
+    margin: 0 25px;
     width: 460px;
     height: 215px;
     border-top: 1px solid #85a712;
@@ -91,26 +92,25 @@ ul li{
 .info-slider{
     margin: 0 25px;
 }
-.slider-description{
-}
 .slider-description h1{
     text-align: left;
     font-weight: normal;
     font-size: 2.5rem;
     line-height: 55px;
+    margin: 20px;
 }
 .slider-description strong{
     font-size: 3rem;
 }
 .description-rigth{
-    width: 210px;
-    height: 210px;
+    width: 203px;
+    height: 203px;
     background-color: #85a712;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px 100px;
+    margin: 50px 54px;
 }
 .description-rigth_text{
     text-align: center;
@@ -134,17 +134,22 @@ ul li{
 .product-conteiner{
     width: 965px;
 }
-.product-slider{
-    padding: 57px 80px 45px;
-}
 .product-slider_items{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 53px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 0 45px;
+}
+.product_items{
+    cursor: pointer;
 }
 .product-item{
     position: relative;
     text-align: center;
+    padding: 55px 10px 51px;
+}
+.product-item img {
+    margin: 0 0px 0 20px;
+    width: 245px;
 }
 .item-price{
     width: 80px;
@@ -152,13 +157,13 @@ ul li{
     background-color: #85a712;
     border-radius: 50%;
     position: absolute;
-    top: -15px;
-    right: -15px;
+    top: 37px;
+    right: 26px;   
     z-index: 2;
 }
 .item-price p{
     font-size: 0.75rem;
-    padding: 9px 0 0 5px;
+    padding: 11px 0 0 5px;
 }
 .item-price span{
     font-size: 1.75rem;
@@ -166,21 +171,51 @@ ul li{
 }
 .item-description{
     position: absolute;
-    bottom: 0;
+    bottom: 51px;
+    left: 20px;
     background-color: #161012c4;
-    width: 100%;
+    width: 84%;
     height: 75px;
 }
 .item-description p{
     line-height: 10px;
 }
 .item-description_hover{
+    display: none;
     position: absolute;
-    top:0;
+    top:54px;
+    left: 20px;
     background-color: #161012c4;
-    width: 100%;
-    height: 100%;
+    width: 84%;
+    height: 75%;
     text-align: center;
+    animation: chenge-block .7s ease-out;
+}
+@keyframes chenge-block{
+    0%{
+       top: 350px;
+    }
+    10%{
+        top: 250px;
+    }
+    20%{
+        top: 200px;
+    }
+    30%{
+        top: 150px;
+    }
+    40%{
+        top: 100px;
+    }
+    50%{
+        top: 90px;
+    }
+    60%{
+        top: 70px;
+    }
+    100%{
+        top: 54px;
+    }
 }
 .hover-description_text{
     font-size: 0.75rem;
@@ -197,10 +232,17 @@ ul li{
 .hover-description p{
     margin: 16px 0 -11px 0;
 }
+.product_items:hover .item-description{
+    display: none;
+}
+.product_items:hover .item-description_hover{
+    display: block;
+}
 /* section aboutUs */
 #aboutUs{
     background: url(../img/background-second.jpg) no-repeat center top;
     background-size: cover;
+    position: relative;
 }
 .aboutUs-row{
     background-color: #16101287;
@@ -238,9 +280,11 @@ ul li{
     border-top: 5px solid #85a712;
     color: #ffffff;
     cursor: pointer;
+    transition-duration: .3s;
 }
 .showMore button:hover{
     background-color: #0f0b0d;
+    border-top: 5px solid #789710;
 }
 .showMore-description{
     border-top: 7px solid #161012;
@@ -262,6 +306,7 @@ ul li{
 }
 .showMore_item h3{
     margin: 5px 0 6px 0;
+    color: #85a712;
 }
 .showMore-item_description{
     margin-top: 0;
@@ -271,4 +316,38 @@ ul li{
     letter-spacing: 0.6px;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+/* footer */
+.footer{
+    background-color: #161012;
+}
+.footer-items{
+    display: flex;
+}
+.subscription input[type="text"]{
+    background: url(../img/mail.png) no-repeat 97% 50%;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    padding: 2px 0;
+    width: 225px;
+}
+.input-description{
+    font-size: .74rem;
+    width: 225px;
+}
+.signature{
+    font-size: .74rem;
+}
+.footer-adress{
+    width: 300px;
+    margin: 0 85px;
+}
+.search input[type="text"]{
+    background: url(../img/Слой\ 26.png) no-repeat 97% 50%;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    padding: 2px 0;
+    width: 225px;
 }

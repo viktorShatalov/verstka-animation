@@ -1,9 +1,9 @@
 // slick-slider
 $('.info-slider').slick({ 
-    autoplay: false,
+    autoplay: true,
 });
-// $('.product-slider_items').slick({ 
-//     autoplay: false,
-// });
-// card-hover
-$('.item-description').hover()
+$('.product-slider_items').slick({ 
+    autoplay: true,
+    slidesToShow: 3,
+    slidesToScroll: 1
+});
