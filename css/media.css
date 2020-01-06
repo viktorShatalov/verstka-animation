@@ -17,6 +17,8 @@
         width: 100%;
         height: 2px;
         top: 9px;
+        -webkit-transition: all .3s ease 0s;
+        -o-transition: all .3s ease 0s;
         transition: all .3s ease 0s;
     }
     .burger-menu::before,
@@ -27,6 +29,8 @@
         width: 100%;
         height: 2px;
         left: 0;
+        -webkit-transition: all .3s ease 0s;
+        -o-transition: all .3s ease 0s;
         transition: all .3s ease 0s;
     }
     .burger-menu::before{
@@ -43,6 +47,8 @@
         height: 100%;
         background-color: #161012;
         z-index: 5;
+        -webkit-transition: all .3s ease 0s;
+        -o-transition: all .3s ease 0s;
         transition: all .3s ease 0s;
         overflow: auto;
     }
@@ -50,14 +56,20 @@
         top: 65px;
     }
     .burger-menu.active span{
-        transform: scale(0);
+        -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+                transform: scale(0);
     }
     .burger-menu.active::before{
-        transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+            -ms-transform:rotate(45deg);
+                transform:rotate(45deg);
         top:9px;
     }
     .burger-menu.active::after{
-        transform:rotate(-45deg);
+        -webkit-transform:rotate(-45deg);
+            -ms-transform:rotate(-45deg);
+                transform:rotate(-45deg);
         bottom:9px
     }
     .header-menu_items{
@@ -65,6 +77,7 @@
         text-align: center;
     }
     .header-top{
+        -ms-grid-columns: 1fr 1fr 2fr;
         grid-template-columns: 1fr 1fr 2fr;
     }
     .info-conteiner{
@@ -83,7 +96,7 @@
         width: 175px;
     }
     .product-slider_items{
-        margin: 0;
+        margin: 0 0 51px 0px;
     }
     .item-price{
         top: 30px;
@@ -129,7 +142,11 @@
     }
 }
 /* _________________________________________mobile_________________________________________ */
-
+@media(max-width:650px){
+.description-rigth{
+    display: none;
+    }
+}
 @media(max-width:410px){
     body{
         overflow-x: hidden;
@@ -185,6 +202,7 @@
     }
     .item-description{
         left: 32px;
+        bottom: 38px;
     }
     .showMore{
         margin: 0 auto;
@@ -211,8 +229,13 @@
     }
     .footer-items{
         padding: 3px 0px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
     }
     .footer-subscription{
         margin: 0 35px;

@@ -103,7 +103,7 @@ ul li{
 }
 .description-left{
     margin: 0 25px;
-    width: 460px;
+    max-width: 475px;
     height: 215px;
     border-top: 1px solid #85a712;
     border-bottom: 1px solid #85a712;
@@ -115,8 +115,7 @@ ul li{
     text-align: left;
     font-weight: normal;
     font-size: 2.5rem;
-    line-height: 55px;
-    margin: 20px;
+    margin: 30px;
 }
 .slider-description strong{
     font-size: 3rem;
@@ -165,7 +164,7 @@ ul li{
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    margin: 0 0 0 45px;
+    margin: 0 0 51px 45px;
 }
 .product_items{
     cursor: pointer;
@@ -173,7 +172,7 @@ ul li{
 .product-item{
     position: relative;
     text-align: center;
-    padding: 55px 10px 51px;
+    padding: 55px 10px 0;
 }
 .product-item img {
     margin: 0 0px 0 20px;
@@ -199,7 +198,7 @@ ul li{
 }
 .item-description{
     position: absolute;
-    bottom: 51px;
+    bottom: 0px;
     left: 20px;
     background-color: #161012c4;
     width: 84%;
@@ -211,11 +210,11 @@ ul li{
 .item-description_hover{
     display: none;
     position: absolute;
-    top:54px;
+    top:55px;
     left: 20px;
     background-color: #161012c4;
     width: 84%;
-    height: 75%;
+    height: 100%;
     text-align: center;
     -webkit-animation: chenge-block .7s ease-out;
             animation: chenge-block .7s ease-out;
@@ -535,8 +534,12 @@ ul li{
     padding: 69px 0 40px 0;
 }
 .aboutUs-menu ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 65px 0;   
 }
 .aboutUs-menu ul li a{
@@ -559,6 +562,8 @@ ul li{
 /* third page */
 
 .news-item{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 20px;
 }
@@ -583,8 +588,12 @@ ul li{
     font-family: initial;
 }
 .pagination ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0 auto;
     padding: 5px 0 46px 0;
 }
